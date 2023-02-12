@@ -64,6 +64,7 @@
 
 .card__content__price  span {
   display: inline-block;
+  margin-bottom: 2rem;
 }
 
 .card__content__price__current {
@@ -80,8 +81,9 @@
 }
 
 .card__content__button {
-  margin: 1rem 0;
-  padding: 1rem 6.42rem;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
   width: 100%;
   border: none;
   border-radius: .5rem;
@@ -103,7 +105,7 @@
 @media(min-width: 1440px) {
   .card {
     display: grid;
-    grid-template-columns: 52% 48%;
+    grid-template-columns: 53% 47%;
     width: 42.86rem;
   }
 

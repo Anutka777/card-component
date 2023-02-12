@@ -6,6 +6,7 @@
 
 :root {
   --darkCyan: hsl(158, 36%, 37%);
+  --blackCyan: hsl(156, 42%, 18%);
   --cream: hsl(30, 38%, 92%);
   --veryDarkBlue: hsl(212, 21%, 14%);
   --darkGrayishBlue: hsl(228, 12%, 48%);
@@ -14,8 +15,6 @@
   font-size: 14px;
   --fraunces: 'Fraunces', serif;
   --montserrat: 'Montserrat', sans-serif;
-
-  background-color: darkcyan; /*testing*/
 }
 
 .card {
@@ -34,13 +33,13 @@
 }
 
 .card__content {
-  padding: 2rem 1.78rem;
+  padding: 2rem;
   font-weight: 500;
   color: var(--darkGrayishBlue);
 }
 
 .card__content__category {
-  margin-bottom: .5rem;
+  margin-bottom: 1rem;
   font-size: 0.77rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -48,15 +47,16 @@
 }
 
 .card__content__title {
-  margin-bottom: 2.14rem;
+  margin-bottom: 2rem;
   font-family: var(--fraunces);
   font-size: 2.2rem;
   font-weight: 700;
   color: var(--veryDarkBlue);
+  line-height: 1;
 }
 
 .card__content__description {
-  margin-bottom: 2.14rem;
+  margin-bottom: 2rem;
   line-height: 1.5;
 }
 
@@ -84,11 +84,29 @@
   border: none;
   border-radius: .5rem;
   background-color: var(--darkCyan);
+  white-space: nowrap;
   font-size: 1rem;
   font-weight: bold;
   color: var(--white);
 }
 
+.card__content__button:hover {
+  background-color: var(--blackCyan);
+}
+
 .card__content__button img {
   margin-right: 1rem;
+}
+
+@media(min-width: 1440px) {
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 42.86rem;
+  }
+
+  .card__image img {
+    object-fit: cover;
+    height: 100%;
+  }
 }

@@ -28,8 +28,10 @@
   font-weight: 700;
 }
 
-.card__image img {
-  max-width: 100%;
+.card__image {
+  height: 17rem;
+  background-image: url(images/image-product-mobile.jpg);
+  background-size: cover;
 }
 
 .card__content {
@@ -101,12 +103,12 @@
 @media(min-width: 1440px) {
   .card {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 52% 48%;
     width: 42.86rem;
   }
 
-  .card__image img {
-    object-fit: cover;
+  .card__image {
+    background-image: url(images/image-product-desktop.jpg);
     height: 100%;
   }
 }
